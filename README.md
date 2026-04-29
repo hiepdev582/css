@@ -32,3 +32,20 @@
 ### IV. Box model
 
 1. Inline: width, height, margin và padding top / bottom không có tác dụng
+
+---
+
+## CSS Advance
+
+### I. Cascade Layers
+
+- `@layer`
+
+---
+
+## CSS Optimization
+
+### I. Responsive
+
+1. Luôn dùng relative unit (element, font,...)
+2. `clamp(MIN, VAL, MAX)`
