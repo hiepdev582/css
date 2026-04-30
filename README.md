@@ -132,3 +132,14 @@ p {
 
 1. Luôn dùng relative unit (element, font,...)
 2. `clamp(MIN, VAL, MAX)`
+3. Web safe fonts
+
+- **sans-serif** (_Hiện đại, dễ đọc trên màn hình kỹ thuật số_): Arial, Helvetica, sans-serif
+
+- **monospace** (_Tiêu chuẩn để viết code vì dễ dàng căn lề và phát hiện lỗi_): Courier New, Courier, monospace
+
+- **serif** (_Trang trọng, truyền thống, thường được dùng cho các văn bản in ấn_): Times New Roman, Times, serif
+
+- **cursive** (_Mô phỏng theo nét chữ viết tay, nghệ thuật_)
+
+- **fantasy** (_Phá cách, sáng tạo, độc lạ_)
