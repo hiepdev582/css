@@ -33,6 +33,11 @@
 
 1. Inline: width, height, margin và padding top / bottom không có tác dụng
 
+### V. Grid
+
+1. `grid-template-columns`
+2. `grid-template-rows`
+
 ---
 
 ## CSS Advance
@@ -40,6 +45,14 @@
 ### I. Cascade Layers
 
 - `@layer`
+- Theo đặc tả của CSS, thứ tự lớp được quyết định bởi lần đầu tiên chúng được nhắc tới nên phải đặt thứ tự @layer ở đầu file.
+
+  ```css
+  @layer layer2, layer1;
+
+  @import url(./layer1.css) layer(layer1);
+  @import url(./layer2.css) layer(layer2);
+  ```
 
 ---
 
