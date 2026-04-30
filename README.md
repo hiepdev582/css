@@ -27,6 +27,40 @@
 4. `word-break`: Quyết định có được phép ngắt ngang một từ hay không
 5. `overflow-wrap`: Cho phép trình duyệt ngắt dòng ở giữa một từ "không thể ngắt" để ngăn việc văn bản tràn ra ngoài khung chứa
 6. `hyphens`: Tự động thêm dấu gạch nối (-) khi ngắt từ ở cuối dòng
+7. `@font-face`: WOFF / WOFF2 (Web Open Font Format): Định dạng tốt nhất hiện nay, được nén tốt và hỗ trợ rộng rãi. WOFF2 là tiêu chuẩn vàng vì dung lượng cực nhẹ
+   - `font-display: swap;`: Hiển thị font chữ mặc định ngay lập tức, sau đó thay thế bằng font đã load
+   - Ưu tiên định dạng WOFF2 và sử dụng Preload:
+
+   ```html
+   <link
+     rel="preload"
+     href="/fonts/myfont.woff2"
+     as="font"
+     type="font/woff2"
+     crossorigin
+   />
+   ```
+
+   - Font Subsetting (Cắt tỉa phông chữ)
+
+   ```css
+   @font-face {
+     font-family: "MyCustomFont";
+     src: url("fonts/vietnam-subset.woff2") format("woff2");
+     unicode-range:
+       U+0102-0103, U+0110-0111, U+1EA0-1EF9; /* Chỉ dải ký tự tiếng Việt */
+   }
+   ```
+
+   - Sử dụng Variable Fonts (Phông chữ biến đổi): Thay vì tải 4 file cho: Regular, Medium, Bold, Italic, chỉ cần tải duy nhất 1 file Variable Font. Điều chỉnh độ đậm (weight) và độ nghiêng một cách linh hoạt bằng CSS
+
+   ```css
+   @font-face {
+     font-family: "RobotoFlex";
+     src: url("fonts/RobotoFlex-Variable.woff2") format("woff2-variations");
+     font-weight: 100 900;
+   }
+   ```
 
 ### IV. Background
 
