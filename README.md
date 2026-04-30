@@ -42,7 +42,13 @@
 
 1.  `filter`: drop-shadow(5px 5px 1px rgb(0 0 0 / 70%))
 
-### VII. CSS Shapes
+### VII. Writing mode
+
+- `horizontal-tb`: Traditional top-to-bottom, left-to-right horizontal writing.
+- `sideways-rl`: Vertical writing, top-to-bottom lines, right-to-left columns.
+- `sideways-lr`: Vertical writing, top-to-bottom lines, left-to-right columns.
+
+### VIII. CSS Shapes
 
 1.  `shape-outside`: circle() / polygon()
 2.  `shape-margin`
@@ -74,7 +80,7 @@
     }
     ```
 
-### VIII. Background Image text
+### IX. Background Image text
 
 ```css
 p {
@@ -93,7 +99,20 @@ p {
 
 ## CSS Advance
 
-### I. Cascade Layers
+### I. CSS Methodologies
+
+1. **BEM**: Block\_\_Element--Modifier
+2. **SMACSS**: Scalable and Modular Architecture for CSS
+
+   ```css
+   @import "base.css";
+   @import "layout.css";
+   @import "module.css";
+   @import "state.css";
+   @import "theme.css";
+   ```
+
+### II. Cascade Layers
 
 - `@layer`
 - Theo đặc tả của CSS, thứ tự lớp được quyết định bởi lần đầu tiên chúng được nhắc tới nên phải đặt thứ tự @layer ở đầu file.
