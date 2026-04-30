@@ -38,26 +38,30 @@
 4. `background-repeat`: repeat-x
 5. `background-attachment`: fixed
 
-### V. Box model
+### V. List style
+
+- `list-style-position`: inside / outside
+
+### VI. Box model
 
 1. Inline: width, height, margin và padding top / bottom không có tác dụng
 
-### VI. Grid
+### VII. Grid
 
 1. `grid-template-columns`
 2. `grid-template-rows`
 
-### VII. CSS filter
+### VIII. CSS filter
 
 1.  `filter`: drop-shadow(5px 5px 1px rgb(0 0 0 / 70%))
 
-### VIII. Writing mode
+### IX. Writing mode
 
 - `horizontal-tb`: Traditional top-to-bottom, left-to-right horizontal writing.
 - `sideways-rl`: Vertical writing, top-to-bottom lines, right-to-left columns.
 - `sideways-lr`: Vertical writing, top-to-bottom lines, left-to-right columns.
 
-### IX. CSS Shapes
+### X. CSS Shapes
 
 1.  `shape-outside`: circle() / polygon()
 2.  `shape-margin`
@@ -89,7 +93,7 @@
     }
     ```
 
-### X. Background Image text
+### XI. Background Image text
 
 ```css
 p {
