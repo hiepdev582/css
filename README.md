@@ -38,6 +38,42 @@
 1. `grid-template-columns`
 2. `grid-template-rows`
 
+### VI. CSS filter
+
+1.  `filter`: drop-shadow(5px 5px 1px rgb(0 0 0 / 70%))
+
+### VII. CSS Shapes
+
+1.  `shape-outside`: circle() / polygon()
+2.  `shape-margin`
+3.  `clip-path`: polygon()
+
+    ```css
+    .shape-circle {
+      /* 1. BẮT BUỘC: Phải dùng float */
+      float: left;
+
+      /* 2. BẮT BUỘC: Phải có kích thước */
+      width: 200px;
+      height: 200px;
+
+      /* Làm cho hình ảnh trông đẹp hơn (bo góc tròn) */
+      border-radius: 50%;
+      object-fit: cover;
+
+      /* 3. QUAN TRỌNG: Định nghĩa hình dạng cho chữ bao quanh */
+      /* circle(bán_kính at tâm_x tâm_y) */
+      shape-outside: circle(50% at center);
+
+      /* Tạo khoảng cách giữa chữ và hình */
+      shape-margin: 20px;
+
+      /* Các thuộc tính trang trí khác */
+      margin-right: 10px; /* Margin thông thường để đẩy chữ nếu Shapes không hỗ trợ */
+      border: 5px solid #eaeaea;
+    }
+    ```
+
 ---
 
 ## CSS Advance
