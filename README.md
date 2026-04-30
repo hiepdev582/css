@@ -74,6 +74,21 @@
     }
     ```
 
+### VIII. Background Image text
+
+```css
+p {
+  color: white;
+  display: inline-block;
+  background: url("./image.jpg") no-repeat center;
+}
+
+.text-clip {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+```
+
 ---
 
 ## CSS Advance
