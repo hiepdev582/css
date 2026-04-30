@@ -19,7 +19,16 @@
 6. `[title~="a"]`: Có attribute title chứa a (space-separated)
 7. `[title|="a"]`: Có attribute title chứa a (begins with value immediately followed by a hyphen)
 
-### III. Background
+### III. Font styles
+
+1. `text-indent`: Thụt đầu dòng cho dòng đầu tiên của đoạn văn
+2. `white-space`: Quyết định cách xử lý dấu cách và xuống dòng trong code (normal, nowrap, pre, pre-wrap, pre-line)
+3. `text-overflow`: Khi chữ bị tràn khung, bạn muốn nó biến mất hay hiện dấu ba chấm _(Thường dùng kèm với `overflow: hidden` và `white-space: nowrap`)_
+4. `word-break`: Quyết định có được phép ngắt ngang một từ hay không
+5. `overflow-wrap`: Cho phép trình duyệt ngắt dòng ở giữa một từ "không thể ngắt" để ngăn việc văn bản tràn ra ngoài khung chứa
+6. `hyphens`: Tự động thêm dấu gạch nối (-) khi ngắt từ ở cuối dòng
+
+### IV. Background
 
 **Shorthand**: background: red url(./image.jpg) 10px 10px repeat-x fixed;
 
@@ -29,26 +38,26 @@
 4. `background-repeat`: repeat-x
 5. `background-attachment`: fixed
 
-### IV. Box model
+### V. Box model
 
 1. Inline: width, height, margin và padding top / bottom không có tác dụng
 
-### V. Grid
+### VI. Grid
 
 1. `grid-template-columns`
 2. `grid-template-rows`
 
-### VI. CSS filter
+### VII. CSS filter
 
 1.  `filter`: drop-shadow(5px 5px 1px rgb(0 0 0 / 70%))
 
-### VII. Writing mode
+### VIII. Writing mode
 
 - `horizontal-tb`: Traditional top-to-bottom, left-to-right horizontal writing.
 - `sideways-rl`: Vertical writing, top-to-bottom lines, right-to-left columns.
 - `sideways-lr`: Vertical writing, top-to-bottom lines, left-to-right columns.
 
-### VIII. CSS Shapes
+### IX. CSS Shapes
 
 1.  `shape-outside`: circle() / polygon()
 2.  `shape-margin`
@@ -80,7 +89,7 @@
     }
     ```
 
-### IX. Background Image text
+### X. Background Image text
 
 ```css
 p {
