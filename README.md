@@ -243,7 +243,13 @@ p {
    - window.outerWidth / outerHeight: Toàn bộ kích thước cửa sổ bao gồm cả thanh công cụ, thanh địa chỉ
    - window.screen: Chứa thông tin về độ phân giải của màn hình vật lý
 
-### V. CSS Properties and Values API (@property)
+### V. CSS Scoping
+
+1. @scope
+
+- `@scope (.parent) to (.child)`: Scope chỉ áp dụng cho các phần tử con của class .parent và không áp dụng cho class .child
+
+### VI. CSS Properties and Values API (@property)
 
 - `@property`: Cho phép định nghĩa một custom property (biến CSS) với kiểu dữ liệu, giá trị ban đầu và khả năng kế thừa cụ thể. Điều này cho phép trình duyệt thực hiện các tối ưu hóa về hiệu năng khi xử lý animation
 
