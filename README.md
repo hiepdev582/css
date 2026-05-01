@@ -83,6 +83,7 @@
 - `column-rule`: Đường viền ngăn cách giữa các cột
 - `column-span`: `all` - Cho phép 1 phần tử _(thường là tiêu đề)_ ngắt ngang các cột và trải dài ra toàn bộ chiều rộng
 - `column-fill`: `balance` _(mặc định, làm cho các cột có chiều cao bằng nhau)_ / `auto` _(lấp đầy cột đầu tiên trước rồi mới sang cột tiếp theo)_
+- `break-inside: avoid` : Ngăn không cho các phần tử bên trong bị chia cắt giữa các cột
 
 4. **Float**: Cho chữ bao quanh 1 hình ảnh. Đây là mục đích nguyên bản của thuộc tính này
    - Thuộc tính `clear` có tác dụng loại bỏ sự ảnh hưởng của Float. Nó ra lệnh cho phần tử đứng sau đó phải "nhảy" xuống dưới phần tử bị float.
@@ -211,9 +212,13 @@ p {
 
 ### I. Responsive
 
-1. Luôn dùng relative unit (element, font,...)
-2. `clamp(MIN, VAL, MAX)`
-3. Web safe fonts
+1. Fluid Grids: Sử dụng % hoặc fr thay vì px
+2. Luôn dùng relative unit (element, font,...)
+3. `clamp(MIN, VAL, MAX)`
+
+### II. Fonts
+
+1. Web safe fonts
 
 - **sans-serif** (_Hiện đại, dễ đọc trên màn hình kỹ thuật số_): Arial, Helvetica, sans-serif
 
