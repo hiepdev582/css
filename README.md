@@ -217,6 +217,24 @@ p {
 - `anchor-size()`: Hàm hỗ trợ tính toán kích thước dựa trên kích thước của phần tử neo
 - `position-visibility: anchors-visible`: Cho phép xác định khi nào phần tử neo hiển thị hoặc không
 
+### IV. CSSOM View Module
+
+1. Dimensions
+   - offset- (offsetWidth, offsetHeight): Kích thước toàn bộ của phần tử bao gồm cả nội dung, vùng đệm (padding) và đường viền (border)
+   - client- (clientWidth, clientHeight): Kích thước vùng nội dung và vùng đệm, nhưng không bao gồm đường viền và thanh cuộn
+   - scroll- (scrollWidth, scrollHeight): Tổng kích thước của nội dung bên trong, bao gồm cả phần đang bị che khuất và cần phải cuộn mới thấy được
+2. Coordinates
+   - getBoundingClientRect(): Phương thức cực kỳ phổ biến trả về một đối tượng chứa kích thước và vị trí của phần tử so với khung nhìn (viewport) hiện tại (top, left, right, bottom, width, height)
+   - offsetParent / offsetTop / offsetLeft: Vị trí của phần tử so với phần tử cha gần nhất được định vị (positioned ancestor)
+3. Scrolling API
+   - window.scrollTo()
+   - window.scrollBy()
+   - element.scrollIntoView()
+4. Window / Screen
+   - window.innerWidth / innerHeight: Kích thước vùng hiển thị nội dung của cửa sổ trình duyệt
+   - window.outerWidth / outerHeight: Toàn bộ kích thước cửa sổ bao gồm cả thanh công cụ, thanh địa chỉ
+   - window.screen: Chứa thông tin về độ phân giải của màn hình vật lý
+
 ---
 
 ## CSS Optimization
