@@ -62,7 +62,46 @@
    }
    ```
 
-### IV. Background
+### IV. Layout
+
+1. **Grid (Bố cục 2 chiều)**: Dùng Grid khi muốn xây dựng khung xương (layout) cho toàn bộ trang web (Header, Sidebar, Main, Footer)
+   - `grid-template-columns: repeat(3, 1fr) / minmax(200px, 1fr) 1fr 1fr / repeat(auto-fit, minmax(250px, 1fr))`
+   - `grid-template-rows: repeat(3, 1fr)`
+   - `grid-auto-columns: 100px`: Quy định chiều cao mặc định cho các cột không được định nghĩa trong `grid-template-columns`
+   - `grid-auto-rows: 100px`: Quy định chiều cao mặc định cho các hàng không được định nghĩa trong `grid-template-rows`
+   - `grid-column`: Chỉ định phần tử sẽ chiếm bao nhiêu cột và ở vị trí nào
+   - `grid-row`: Chỉ định phần tử sẽ chiếm bao nhiêu hàng và ở vị trí nào
+   - `grid-template-areas` & `grid-area`: Định nghĩa khu vực cho từng phần tử
+2. **Flexbox (Bố cục 1 chiều)**: Dùng Flexbox khi chỉ quan tâm đến việc sắp xếp các phần tử theo 1 hàng hoặc 1 cột
+   - `flex`: `flex-grow` + `flex-shrink` + `flex-basis`
+   - `flex-flow`: `flex-direction` + `flex-wrap`
+   - `order`: Thay đổi thứ tự xuất hiện của các phần tử
+3. **Multi-column**: Dùng khi có 1 khối văn bản dài và muốn nó tự động chảy qua các cột như báo giấy
+
+- `columns`: `column-count` + `column-width`
+- `column-gap`: Khoảng cách giữa các cột
+- `column-rule`: Đường viền ngăn cách giữa các cột
+- `column-span`: `all` - Cho phép 1 phần tử _(thường là tiêu đề)_ ngắt ngang các cột và trải dài ra toàn bộ chiều rộng
+- `column-fill`: `balance` _(mặc định, làm cho các cột có chiều cao bằng nhau)_ / `auto` _(lấp đầy cột đầu tiên trước rồi mới sang cột tiếp theo)_
+
+4. **Float**: Cho chữ bao quanh 1 hình ảnh. Đây là mục đích nguyên bản của thuộc tính này
+   - Thuộc tính `clear` có tác dụng loại bỏ sự ảnh hưởng của Float. Nó ra lệnh cho phần tử đứng sau đó phải "nhảy" xuống dưới phần tử bị float.
+   - `display: flow-root`: Là 1 cách hiện đại để "reset" Float mà không cần dùng Clearfix. Nó tạo ra một Block mới "chịu trách nhiệm" chứa toàn bộ chiều cao của các thành phần con bên trong nó, qua đó kéo container tự động bao quanh các phần tử con đã bị float.
+
+5. **Table**: Dùng khi muốn tạo 1 danh sách hoặc cấu trúc dạng bảng mà các cột phải có chiều cao bằng nhau và căn lề dọc chuẩn xác
+
+- `display: table`
+- `display: table-row`
+- `display: table-cell`
+
+6. **Position**
+   - `static`: Mặc định. Phần tử đứng yên tại vị trí của nó
+   - `relative`: Tương đối so với vị trí ban đầu của nó, không làm ảnh hưởng đến vị trí của các phần tử xung quanh
+   - `absolute`: Tuyệt đối so với phần tử cha gần nhất có `position: relative` hoặc `absolute`. Nếu không có thì sẽ so với viewport
+   - `fixed`: Cố định so với viewport
+   - `sticky`: Kết hợp giữa `relative` và `fixed`. Phần tử sẽ di chuyển như `relative` cho đến khi đạt đến một ngưỡng nhất định, sau đó sẽ dính chặt vào viewport như `fixed`
+
+### V. Background
 
 **Shorthand**: background: red url(./image.jpg) 10px 10px repeat-x fixed;
 
@@ -72,18 +111,13 @@
 4. `background-repeat`: repeat-x
 5. `background-attachment`: fixed
 
-### V. List style
+### VI. List style
 
 - `list-style-position`: inside / outside
 
-### VI. Box model
+### VII. Box model
 
 1. Inline: width, height, margin và padding top / bottom không có tác dụng
-
-### VII. Grid
-
-1. `grid-template-columns`
-2. `grid-template-rows`
 
 ### VIII. CSS filter
 
