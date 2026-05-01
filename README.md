@@ -282,6 +282,11 @@ p {
 }
 ```
 
+### VII. CSS Scroll Snap
+
+- `scroll-snap-type`: x mandatory / x proximity / y mandatory / y proximity / both mandatory / both proximity
+- `scroll-snap-align`: start / end / center
+
 ---
 
 ## CSS Optimization
