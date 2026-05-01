@@ -206,6 +206,17 @@ p {
   @import url(./layer2.css) layer(layer2);
   ```
 
+### III. CSS anchor positioning
+
+- **Anchor element (Phần tử neo)**: Phần tử đóng vai trò là cột mốc
+- **Anchored element (Phần tử được neo)**: Phần tử sẽ "bám" theo phần tử neo
+- `anchor-name`: Đặt tên cho phần tử neo
+- `position-anchor`: Chỉ định tọa độ của "điểm neo" trên phần tử được neo
+- `position-try-options: flip-block`: Cho phép xác định các vị trí thay thế khi vị trí ban đầu bị chặn
+- `anchor()`: Hàm hỗ trợ tính toán tọa độ dựa trên vị trí của phần tử neo
+- `anchor-size()`: Hàm hỗ trợ tính toán kích thước dựa trên kích thước của phần tử neo
+- `position-visibility: anchors-visible`: Cho phép xác định khi nào phần tử neo hiển thị hoặc không
+
 ---
 
 ## CSS Optimization
