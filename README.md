@@ -243,6 +243,39 @@ p {
    - window.outerWidth / outerHeight: Toàn bộ kích thước cửa sổ bao gồm cả thanh công cụ, thanh địa chỉ
    - window.screen: Chứa thông tin về độ phân giải của màn hình vật lý
 
+### V. CSS Properties and Values API (@property)
+
+- `@property`: Cho phép định nghĩa một custom property (biến CSS) với kiểu dữ liệu, giá trị ban đầu và khả năng kế thừa cụ thể. Điều này cho phép trình duyệt thực hiện các tối ưu hóa về hiệu năng khi xử lý animation
+
+```css
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.rotating-gradient {
+  background: conic-gradient(
+    from var(--angle),
+    red,
+    yellow,
+    lime,
+    aqua,
+    blue,
+    magenta,
+    red
+  );
+  height: 200px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+```
+
 ---
 
 ## CSS Optimization
