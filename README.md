@@ -177,6 +177,14 @@ p {
 }
 ```
 
+### XII. Scrollbar
+
+1. `scrollbar-gutter`: Giữ một khoảng trống cố định cho thanh cuộn để tránh việc bố cục bị "nhảy" khi thanh cuộn xuất hiện hoặc biến mất
+2. `overscroll-behavior`: `auto / contain / none`
+   - `auto`: Cho phép cuộn lan tỏa lên phần tử cha (Scroll chaining vẫn diễn ra)
+   - `contain`: Ngăn chặn hiện tượng cuộn lan tỏa. Khi cuộn hết nội dung phần tử con, phần tử cha sẽ không bị cuộn theo. Tuy nhiên, các hiệu ứng mặc định của trình duyệt (như hiệu ứng "bật nảy" ở đầu/cuối trang trên iOS) vẫn có thể xuất hiện
+   - `none`: Giống như `contain` nhưng loại bỏ luôn cả các hiệu ứng "bật nảy" (bounce effects) hoặc các hành vi mặc định khác (như kéo để tải lại trang - pull-to-refresh)
+
 ---
 
 ## CSS Advance
