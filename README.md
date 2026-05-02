@@ -4,6 +4,8 @@
 
 ### I. How browsers load websites
 
+**DOM → CSSOM → Render Tree → Layout → Paint → Composite**
+
 1. Web đọc file HTML và gen ra **DOM Tree** (Document Object Model) bao gồm: Element + Attribute + Text
 2. Web đọc file CSS và gen ra **Render Tree** bao gồm: DOM Tree + Style
 3. **Layout** và **Painting**
@@ -72,6 +74,7 @@
    - `grid-column`: Chỉ định phần tử sẽ chiếm bao nhiêu cột và ở vị trí nào
    - `grid-row`: Chỉ định phần tử sẽ chiếm bao nhiêu hàng và ở vị trí nào
    - `grid-template-areas` & `grid-area`: Định nghĩa khu vực cho từng phần tử
+   - `place-items: center`: `align-items: center` + `justify-items: center`
 2. **Flexbox (Bố cục 1 chiều)**: Dùng Flexbox khi chỉ quan tâm đến việc sắp xếp các phần tử theo 1 hàng hoặc 1 cột
    - `flex`: `flex-grow` + `flex-shrink` + `flex-basis`
    - `flex-flow`: `flex-direction` + `flex-wrap`
@@ -243,7 +246,13 @@ p {
    - window.outerWidth / outerHeight: Toàn bộ kích thước cửa sổ bao gồm cả thanh công cụ, thanh địa chỉ
    - window.screen: Chứa thông tin về độ phân giải của màn hình vật lý
 
-### V. CSS Properties and Values API (@property)
+### V. CSS Scoping
+
+1. @scope
+
+- `@scope (.parent) to (.child)`: Scope chỉ áp dụng cho các phần tử con của class .parent và không áp dụng cho class .child
+
+### VI. CSS Properties and Values API (@property)
 
 - `@property`: Cho phép định nghĩa một custom property (biến CSS) với kiểu dữ liệu, giá trị ban đầu và khả năng kế thừa cụ thể. Điều này cho phép trình duyệt thực hiện các tối ưu hóa về hiệu năng khi xử lý animation
 
@@ -275,6 +284,30 @@ p {
   }
 }
 ```
+
+### VII. CSS Scroll Snap
+
+- `scroll-snap-type`: x mandatory / x proximity / y mandatory / y proximity / both mandatory / both proximity
+- `scroll-snap-align`: start / end / center
+
+### VIII. Scroll-driven animations
+
+```css
+animation-timeline: scroll(root);
+animation-name: grow-progress;
+transform-origin: 0 50%;
+
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+```
+
+### IX. Stacking Context (z-index)
 
 ---
 
