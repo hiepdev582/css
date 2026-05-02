@@ -72,6 +72,7 @@
    - `grid-column`: Chỉ định phần tử sẽ chiếm bao nhiêu cột và ở vị trí nào
    - `grid-row`: Chỉ định phần tử sẽ chiếm bao nhiêu hàng và ở vị trí nào
    - `grid-template-areas` & `grid-area`: Định nghĩa khu vực cho từng phần tử
+   - `place-items: center`: `align-items: center` + `justify-items: center`
 2. **Flexbox (Bố cục 1 chiều)**: Dùng Flexbox khi chỉ quan tâm đến việc sắp xếp các phần tử theo 1 hàng hoặc 1 cột
    - `flex`: `flex-grow` + `flex-shrink` + `flex-basis`
    - `flex-flow`: `flex-direction` + `flex-wrap`
@@ -286,6 +287,25 @@ p {
 
 - `scroll-snap-type`: x mandatory / x proximity / y mandatory / y proximity / both mandatory / both proximity
 - `scroll-snap-align`: start / end / center
+
+### VIII. Scroll-driven animations
+
+```css
+animation-timeline: scroll(root);
+animation-name: grow-progress;
+transform-origin: 0 50%;
+
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+```
+
+### IX. Stacking Context (z-index)
 
 ---
 
